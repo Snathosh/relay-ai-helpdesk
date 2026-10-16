@@ -1,0 +1,30 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: relay-helpdesk
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/helpdesk}
+    username: ${DATABASE_USERNAME:helpdesk}
+    password: ${DATABASE_PASSWORD:helpdesk}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 21MB
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:}
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health

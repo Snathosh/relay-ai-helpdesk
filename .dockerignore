@@ -1,0 +1,11 @@
+.git
+.vscode
+**/node_modules
+**/dist
+backend/target
+backend/*.mv.db
+backend/*.trace.db
+backend/*.lock.db
+.env
+.env.*
+!.env.example

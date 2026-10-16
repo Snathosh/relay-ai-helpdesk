@@ -1,0 +1,21 @@
+# Build output
+/frontend/node_modules/
+/frontend/dist/
+/backend/target/
+/backend/*.mv.db
+/backend/*.trace.db
+/backend/*.lock.db
+/.neon
+**/*.tsbuildinfo
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# IDE and OS files
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db

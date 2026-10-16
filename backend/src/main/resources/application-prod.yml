@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${PGHOST_PRIVATE}:${PGPORT_PRIVATE:5432}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+  ai:
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+
+server:
+  forward-headers-strategy: framework
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        secure: true
+        same-site: lax
